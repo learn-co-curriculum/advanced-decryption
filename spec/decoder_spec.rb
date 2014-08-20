@@ -12,7 +12,14 @@ describe '#decode' do
     expect(decode("roawinbow")).to eq("rainbow")
     expect(decode("dermcatoglcypshsi")).to eq("dermatoglyphics")
     expect(decode("cronquet-plagying")).to eq("croquet-playing")
+  end
+
+  it 'prioritizes pairs of characters that have the highest number of unique characters between them' do
     expect(decode("amyblyidextlrous")).to eq("ambidextrously")
+  end
+
+  it 'rearranges pairs of characters that have the highest number of unique characters between them first' do
+    expect(decode("unlcoepyerightalb")).to eq("uncopyrightable")
   end
 
   it 'removes undescores and any characters following the underscore' do
