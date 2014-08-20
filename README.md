@@ -4,7 +4,7 @@ languages: ruby
 resources: 0
 ---
 
-# Hidden Message
+# Recursive Decryption
 
 # Objectives
 
