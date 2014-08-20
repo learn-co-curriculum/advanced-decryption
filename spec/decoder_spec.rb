@@ -8,7 +8,7 @@ describe '#decode' do
 
   it 'removes undescores and any characters following the underscore' do
     expect(decode("abc_def")).to eq("abc")
-  end
+  end 
 
   it 'correctly calculates the final result of a short string' do
     expect(decode('daccadfghd_i')).to eq("fgh")
