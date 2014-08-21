@@ -21,3 +21,4 @@ Use the steps below to make a functioning method that decodes a string. It will 
 5. The remaining string is the answer. For example, for the input "daccadfghd_i" the answer is "fgh".
 
 # Resources
+* [Ruby Docs](http://www.ruby-doc.org/core-2.1.2/) - [Strings](http://www.ruby-doc.org/core-2.1.2/String.html)
