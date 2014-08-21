@@ -18,16 +18,25 @@ describe '#decode' do
     expect(decode("amyblyidextlrous")).to eq("ambidextrously")
   end
 
-  it 'rearranges pairs of characters that have the highest number of unique characters between them first' do
-    expect(decode("unlcoepyerightalb")).to eq("uncopyrightable")
-  end
-
   it 'removes undescores and any characters following the underscore' do
     expect(decode("abc_def")).to eq("abc")
   end 
 
   it 'correctly calculates the final result of a short string' do
+    expect(decode("abacbcbefge")).to eq("fgebac")
+  end
+
+  it 'correctly calculates the final result of a short string with one underscore' do
     expect(decode('daccadfghd_i')).to eq("fgh")
   end
 
+  it 'correctly calculates the final result of a string with multiple underscores' do
+    expect(decode("_a_abda_")).to eq("a_abda")
+  end
+
+  it "correctly calculates the final result of a long string" do
+    message = "ttvmswxjzdgzqxotby_lslonwqaipchgqdo_yz_fqdagixyrobdjtnl_jqzpptzfcdcjjcpjjnnvopmh"
+    expect(decode(message)).to eq("rainbow")
+  end
+  
 end

@@ -2,8 +2,11 @@ require "pry"
 
 def decode(message)
   until message.split("").uniq == message.split("")
-    letter_pair = find_letters(message)
-    message = update_message(message, letter_pair)
+    index_array = find_letters(message)
+    if index_array.include? false
+      break
+    end
+    message = update_message(message, index_array)
   end
   message.gsub(/_(.*)/, "")
 end
@@ -17,8 +20,8 @@ end
 
 def find_letters(message)
   max_length = 0
-  front_i = "?"
-  back_i = "?"
+  front_i = false
+  back_i = false
 
   front = 0
   max = message.length
