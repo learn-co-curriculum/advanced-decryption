@@ -4,7 +4,7 @@ languages: ruby
 resources: 0
 ---
 
-# Recursive Decryption
+# Advanced Decryption
 
 # Objectives
 
