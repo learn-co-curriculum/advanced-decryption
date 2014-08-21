@@ -1,13 +1,11 @@
-require "pry"
-
 def decode(message)
   until message.split("").uniq == message.split("")
-    # abacbcbefge aaccbefgeb aaccbfgbe aaccfgeb ccfgeba fgebac
     index_array = find_letters(message)
     if index_array.include? false
       break
     end
     message = update_message(message, index_array)
+    puts message
   end
   message.gsub(/_(.*)/, "")
 end
@@ -45,3 +43,4 @@ def find_letters(message)
   end
   [front_i, back_i]
 end
+
