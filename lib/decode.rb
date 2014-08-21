@@ -2,6 +2,7 @@ require "pry"
 
 def decode(message)
   until message.split("").uniq == message.split("")
+    # abacbcbefge aaccbefgeb aaccbfgbe aaccfgeb ccfgeba fgebac
     index_array = find_letters(message)
     if index_array.include? false
       break
@@ -30,10 +31,12 @@ def find_letters(message)
     while back > front
       if message[front] == message[back]
         temp_arr = message[(front + 1)...back].split("")
-        if temp_arr.uniq == temp_arr && temp_arr.length > max_length
-          front_i = front
-          back_i = back
-          max_length = temp_arr.length
+        if temp_arr.uniq == temp_arr
+          if message[front..back].length > max_length
+            front_i = front
+            back_i = back
+            max_length = message[front..back].length
+          end
         end
       end
       back -= 1
