@@ -1,7 +1,7 @@
 ---
 tags: cs, comp sci, computer science
 languages: ruby
-resources: 0
+resources: 1
 ---
 
 # Advanced Decryption
