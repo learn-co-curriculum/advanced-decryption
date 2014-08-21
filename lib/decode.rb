@@ -1,29 +1,41 @@
 require "pry"
 
-def decode(string)
-  modified_message = re_move_chars(string)
-  modified_message.gsub(/_(.*)/, "")
+def decode(message)
+  until message.split("").uniq == message.split("")
+    letter_pair = find_letters(message)
+    message = update_message(message, letter_pair)
+  end
+  message.gsub(/_(.*)/, "")
 end
 
-def re_move_chars(message)
-  left_i = 0
+def update_message(message, index_array)
+  character = message[index_array[0]]
+  message.slice!(index_array[0])
+  message.slice!(index_array[1] - 1)
+  message << character
+end
+
+def find_letters(message)
+  max_length = 0
+  front_i = "?"
+  back_i = "?"
+
+  front = 0
   max = message.length
-  while left_i < max
-    current_character = message[left_i]
-    right_i = max - 1
-    while right_i > left_i
-      if current_character == message[right_i]
-        temp_arr = message[(left_i + 1)...right_i].split("")
-        if temp_arr.uniq == temp_arr # if there are no repeating characters
-          message.slice!(left_i) # remove left character
-          message.slice!(right_i - 1) # remove right character
-          message << current_character # push character onto the end of the string
-          return re_move_chars(message)
+  while front < max
+    back = max - 1
+    while back > front
+      if message[front] == message[back]
+        temp_arr = message[(front + 1)...back].split("")
+        if temp_arr.uniq == temp_arr && temp_arr.length > max_length
+          front_i = front
+          back_i = back
+          max_length = temp_arr.length
         end
       end
-      right_i -= 1
+      back -= 1
     end
-    left_i += 1
+    front += 1
   end
-  message
+  [front_i, back_i]
 end
