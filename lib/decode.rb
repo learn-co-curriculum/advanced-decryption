@@ -5,7 +5,6 @@ def decode(message)
       break
     end
     message = update_message(message, index_array)
-    puts message
   end
   message.gsub(/_(.*)/, "")
 end
