@@ -1,5 +1,5 @@
 ---
-tags: cs, comp sci, computer science
+tags: cs, comp sci, computer science, strings, decode
 languages: ruby
 resources: 1
 ---
