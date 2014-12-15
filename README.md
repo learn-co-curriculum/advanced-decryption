@@ -24,9 +24,9 @@ Use the steps below to make a functioning method that decodes a string. It will 
 
 #### Ex. 1
 
-```text
-For example, for the input \"daccadfghd_i\" the answer is \"fgh\"
+For example, for the input "daccadfghd_i" the answer is "fgh".
 
+```text
 daccadfghd_i
      X   |   # Remove one d, move the other to the end
          `v  
