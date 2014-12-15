@@ -24,7 +24,7 @@ Use the steps below to make a functioning method that decodes a string. It will 
 
 In `spec/decoder_spec.rb`, there is one pending test. Remove the `x` before the final test to run it. Ideally, your code should be fast enough to pass this test in under 45 minutes. 
 
-This bonus will be very challenging, so give yourself a couple days of thinking about it if the answer is not obvious. Remember, recusion may not be the fastest way to approach this problem.
+This bonus will be very challenging, so give yourself a couple days of thinking about it if the answer is not obvious. Remember, recursion may not be the fastest way to approach this problem.
 
 ## Resources
 * [Ruby Docs](http://www.ruby-doc.org/core-2.1.2/) - [Strings](http://www.ruby-doc.org/core-2.1.2/String.html)
