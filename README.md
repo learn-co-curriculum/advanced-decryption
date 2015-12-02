@@ -137,3 +137,5 @@ This bonus will be very challenging, so give yourself a couple days of thinking 
 
 ## Resources
 * [Ruby Docs](http://www.ruby-doc.org/core-2.1.2/) - [Strings](http://www.ruby-doc.org/core-2.1.2/String.html)
+
+<a href='https://learn.co/lessons/advanced-decryption' data-visibility='hidden'>View this lesson on Learn.co</a>
